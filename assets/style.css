@@ -49,3 +49,21 @@ main .city i {
 .explorer p {
   font-size: 1rem;
 }
+.explorer button {
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 2px 1px 16px -3px #0000;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  cursor: pointer;
+  transition-duration: .25s;
+  margin-top: 1rem;
+}
+
+.explorer button:hover {
+  transform: scale(1.82);
+  opacity: 0.9;
+}
