@@ -1,0 +1,10 @@
+.fonction {
+  & ol {
+    display: flex;
+  }
+  & li {
+    background-color: $colour-grey;
+    padding: 1rem 2rem;
+  }
+}
+

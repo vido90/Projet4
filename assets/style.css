@@ -1,6 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+.header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  position: relative;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    font-size: 4rem;
+  }
+}
+
+.explorer {
+  text-align: center;
+}
+.explorer__bold {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.explorer__subtitle {
+  font-size: 1rem;
+}
+.explorer button {
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 2px 1px 16px -3px rgba(0, 0, 0, 0);
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  cursor: pointer;
+  transition-duration: 0.25s;
+  margin-top: 2.5rem;
+}
+.explorer button:hover {
+  transform: scale(1.82);
+  opacity: 0.9;
+}
+
 
 ::before,
 ::after {
@@ -11,15 +51,6 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-}
-
-header {
-  font-family: "Shrikhand" , cursive;
-  text-align: center;
-  box-shadow: 0 0 0.5rem rgb(0 0 0/ 25%);
-  padding: 0.3rem ;
-  margin: 0;
-  position: relative;
 }
 
 main .city {
@@ -36,34 +67,4 @@ main .city i {
   font-size: 1.5rem;
 }
 
-/*explorer*/
-.explorer {
-  text-align: center;
-}
-
-.explorer h2 {
-  margin-top: 2rem;
-  font-size: 2rem;
-}
-
-.explorer p {
-  font-size: 1rem;
-}
-.explorer button {
-  color: white;
-  font-weight: 300;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 2rem;
-  box-shadow: 2px 1px 16px -3px #0000;
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
-  cursor: pointer;
-  transition-duration: .25s;
-  margin-top: 1rem;
-}
-
-.explorer button:hover {
-  transform: scale(1.82);
-  opacity: 0.9;
-}
+/*# sourceMappingURL=style.css.map */

@@ -1,1 +1,33 @@
-.red {color:blue;}
+@import "variable";
+@import "header";
+@import "fonctionnement";
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+/*# sourceMappingURL=style.css.map */
+
+::before,
+::after {
+  box-sizing: border-box;
+  border: 1px solid;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+
+main .city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+main .city i {
+  font-size: 1.5rem;
+}
+
