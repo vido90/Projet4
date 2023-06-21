@@ -1,0 +1,54 @@
+.function {
+  background-color: $color-white;
+  &__buttons {
+    counter-reset: steps;
+    display: flex;
+    gap: 2rem;
+    @media (max-width:992px) {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
+}
+
+.function__btn {
+  display: flex;
+  align-items: center;
+  background-color: $background-color;
+  border-radius: 1.5rem;
+  flex-grow: 1;
+  padding: 1.5rem 0;
+  width: 100%;
+  @include base-shadow;
+  &:hover {
+      transition: all 80ms ease-in;
+      @include btn-lighten;
+        & > i {
+            transition: all 80ms ease-in;
+            color:darken($color: $primary-color, $amount: 15);
+        }
+    }
+  &::before {
+    counter-increment:steps;
+    content: counter(steps);
+    position:relative;
+    left: -0.8rem;
+    
+    color:#FFF;
+    width: 1.5rem;
+    height: 1.5rem;
+  
+    background-color: $primary-color; 
+    border-radius:50%;
+  
+    @extend %flex-center;
+  }
+    & i {
+      color: grey;
+      padding: 0 1rem;
+      font-size: 1.3rem;
+    }
+}
+
+
+
