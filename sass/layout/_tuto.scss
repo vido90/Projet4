@@ -1,0 +1,62 @@
+
+$tuto-bullet-height:1rem;
+.tuto {
+  counter-reset: steps;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  & ol {
+    @media (max-width:992px) {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    counter-reset: steps;
+    display: flex;
+    gap: 1rem;
+  }
+  & li {
+    position: relative;
+    margin-top: 1rem;
+    margin: 1rem 0rem 1rem 1rem;
+    &::before{
+      content: counter(steps);
+      counter-increment: steps;
+      color: white;
+      background-color: $colour-primary;
+      width: 2 * $tuto-bullet-height;
+      height: 2 * $tuto-bullet-height;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: -$tuto-bullet-height;
+      transform: translateY(-50%);
+    }
+    list-style-type: none;
+    background-color: $grey;
+    padding: 1rem 2rem;
+    border: 1px;
+    flex-grow: 1;
+    border-radius: 1rem;
+    @include base-shadow;
+  }
+
+  & .grey {
+    margin-right: 1rem;
+    color: $lightgrey;
+    font-size: 1rem;
+  }
+
+  
+  
+  &__buttons {
+    counter-reset: steps;
+    display: flex;
+    gap: 2rem;
+    @media (max-width:1000px) {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
+}
