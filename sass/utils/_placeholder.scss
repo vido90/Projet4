@@ -1,0 +1,13 @@
+// centrer un objet //
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// hover_btn //
+%hover-btn {
+    transform: scale(1.05);
+    transition: all 80ms ease-in;
+    filter: brightness(1.05);
+    box-shadow: #d5d5d5 0.5rem 0.5rem 0.5rem 0.1rem;
+}

@@ -1,27 +1,85 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-.header {
-  font-family: "Shrikhand", cursive;
-  text-align: center;
-  position: relative;
-  font-size: 2rem;
-  margin: 0.5rem;
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
-@media screen and (min-width: 768px) {
-  .header {
-    font-size: 4rem;
-  }
+
+body {
+  background-color: #f6f6f6;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  font-family: "Roboto" sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: 1rem;
+}
+
+.reserved__btn button:hover {
+  transform: scale(1.05);
+  transition: all 80ms ease-in;
+  filter: brightness(1.05);
+  box-shadow: #d5d5d5 0.5rem 0.5rem 0.5rem 0.1rem;
+}
+
+.header {
+  background-color: white;
+  margin: 0;
+  position: relative;
+}
+
+.header__logo {
+  margin: 0;
+  pad: 1rem;
+  box-shadow: 0rem 0rem 0.5rem #919191;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo img {
+  width: 11.25rem;
 }
 
 .explorer {
   text-align: center;
 }
 .explorer__bold {
-  margin-top: 2rem;
-  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 1rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
 }
 .explorer__subtitle {
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
 }
 .explorer button {
   color: white;
@@ -30,41 +88,459 @@
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-  box-shadow: 2px 1px 16px -3px rgba(0, 0, 0, 0);
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   cursor: pointer;
   transition-duration: 0.25s;
   margin-top: 2.5rem;
+  box-shadow: 0rem 0.2rem 0.5rem 0.1rem #D5D5D5;
 }
 .explorer button:hover {
   transform: scale(1.82);
   opacity: 0.9;
 }
 
+.tuto {
+  background-color: white;
+  counter-reset: steps;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
+}
+.tuto ol {
+  counter-reset: steps;
+  display: flex;
+}
+@media (max-width: 992px) {
+  .tuto ol {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+}
+.tuto li {
+  position: relative;
+  margin-top: 1rem;
+  margin: 1rem 0rem 1rem 1rem;
+  list-style-type: none;
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  border: 1px;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 0rem 0.2rem 0.5rem 0.1rem #D5D5D5;
+}
+.tuto li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356DC;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  transform: translateY(-50%);
+}
+.tuto .grey {
+  margin-right: 1rem;
+  color: #7e7e7e;
+  font-size: 1rem;
+}
+.tuto__buttons {
+  counter-reset: steps;
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .tuto__buttons {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
 
-::before,
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 1rem;
+  margin: 1.5rem 0 4rem 0;
+}
+
+h2 {
+  font-family: "Roboto" sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.restaurant__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.restaurant__list__card {
+  width: 18rem;
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  box-shadow: 0rem 0.2rem 0.5rem 0.1rem #D5D5D5;
+}
+
+.restaurant__list__card__image {
+  border: 0 solid transparent;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  object-fit: cover;
+}
+.restaurant__list__card__image::before {
+  content: "Nouveau";
+  position: absolute;
+  padding: 0.5rem;
+  font-family: "Roboto", "sans-serif";
+  font-size: 0.8rem;
+  color: #1b6150;
+  background-color: #99e2d0;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 0.25rem;
+}
+.restaurant__list__card__image img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 0.9rem 0.9rem 0 0;
+}
+
+.restaurant__list__card__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.restaurant__list__card__body__title {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.restaurant__list__card__body__title__h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.restaurant__list__card__body__title__location {
+  font-family: "Roboto" sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.restaurant__list__card__like {
+  position: relative;
+  width: 10%;
+}
+.restaurant__list__card__like--empty {
+  position: absolute;
+}
+.restaurant__list__card__like--full {
+  position: absolute;
+  background: linear-gradient(180deg, #9356dc 25%, #ff79da 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 2rem;
+}
+
+.footer__title {
+  font-family: "Shrikhand", "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.footer__items {
+  margin-top: 1rem;
+  padding: 0;
+  list-style-type: none;
+}
+.footer__items li {
+  padding: 0.2rem;
+}
+.footer__items li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  background-color: white;
+  margin: 0;
+  position: relative;
+}
+
+.header__logo {
+  margin: 0;
+  padding: 1rem;
+  box-shadow: 0rem 0rem 0.5rem #919191;
+}
+.header__logo ::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__arrow {
+  position: absolute;
+  left: 2rem;
+  top: 1.4rem;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.header__logo img {
+  width: 11.25rem;
+}
+
+.BG__img {
+  max-width: 100%;
+  max-height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  position: relative;
+  z-index: 1;
+  margin-top: -5rem;
+  background-color: #f6f6f6;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.menu__header {
+  padding: 1rem 2rem 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.5rem;
+}
+
+.heart {
+  position: relative;
+}
+.heart i {
+  font-size: 1.5rem;
+}
+.heart .fas {
+  position: absolute;
+  opacity: 0;
+  background: #9356DC;
+  background: linear-gradient(180deg, #9356DC 25%, #FF79DA 100%);
+  cursor: pointer;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.heart:hover .fas {
+  transition: all 150ms ease-in;
+  display: inline;
+  opacity: 1;
+}
+.heart:hover .far {
+  transition: all 150ms ease-in;
+  opacity: 0;
+}
+
+.sousmenu {
+  width: 100%;
+}
+
+.sousmenu__title {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-bottom: 0.3rem;
+  margin: 1rem;
+}
+.sousmenu__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 4rem;
+  height: 0.2rem;
+  background-color: #99E2D0;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.menuitem {
+  display: flex;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: white;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0rem 0.2rem 0.5rem 0.1rem;
+  animation: itemppear 0.8s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+  max-width: 100%;
+}
+
+.menuitem__header {
+  flex-basis: 0%;
+  min-width: 0;
+  flex-grow: 1;
+  padding: 1rem;
+}
+.menuitem__header h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+.menuitem__header .truncated {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menuitem__price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.menuitem__done {
+  width: 4rem;
+  transition: 0.5s;
+  margin-right: -4rem;
+  background-color: #99E2D0;
+}
+
+.menuitem__wrap {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border-radius: 5rem;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+
+.menuitem__icon {
+  color: #99E2D0;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-7 {
+  animation-delay: 0.7s;
+}
+
+.delay-8 {
+  animation-delay: 0.8s;
+}
+
+.delay-9 {
+  animation-delay: 0.9s;
+}
+
+.reserved__btn button:hover {
+  transform: scale(1.05);
+  transition: all 80ms ease-in;
+  filter: brightness(1.05);
+  box-shadow: #D5D5D5 0.5rem 0.5rem;
+}
+.reserved__btn button {
+  font-family: "Roboto" sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+  border-radius: 5rem;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  background: #9356DC;
+  background: linear-gradient(-10deg #9356DC 25%, #FF79DA 100%);
+}
+
+/*Réservation*/
+.reserved > h2 {
+  margin: 1rem 3rem;
+}
+
+.reserved {
+  text-align: center;
+}
+.reserved__btn button {
+  background: #9356DC;
+  background: linear-gradient(-10deg, #9356DC 25%, #FF79DA 100%);
+}
+
+/* ::before,
 ::after {
   box-sizing: border-box;
   border: 1px solid;
-}
-
+} */
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
-main .city {
+main .search {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  background-color: #f3f3f3;
+  background-color: #eaeaea;
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
-main .city i {
-  font-size: 1.5rem;
+.search-box input {
+  border: none;
+  background-color: #eaeaea;
+  width: 7rem;
+}
+
+main .search i {
+  padding-right: 0.5rem;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

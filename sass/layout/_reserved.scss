@@ -1,0 +1,15 @@
+/*Réservation*/
+.reserved > h2 {
+    margin: 1rem 3rem;
+
+}
+
+.reserved {
+    text-align: center;
+    &__btn button {
+        @include gradient(-10deg);
+        &:hover {
+            @extend %hover-btn;
+        }
+    }
+}

@@ -1,0 +1,238 @@
+@use "../utils/mixins";
+
+
+.header {
+    background-color: white;
+    margin: 0;
+    position: relative;
+}
+
+.header__logo {
+    margin: 0;
+    padding: 1rem;
+    box-shadow: 0rem 0rem 0.5rem #919191;
+    ::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+.header__arrow {
+    position: absolute;
+    left: 2rem;
+    top: 1.4rem;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.header__logo img {
+    width: 11.25rem;
+}
+
+.BG__img {
+    max-width: 100%;
+    max-height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu {
+    position: relative;
+    z-index: 1;
+    margin-top: -5rem;
+    background-color: $grey;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.menu__header {
+    padding: 1rem 2rem 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__title {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 1.5rem;
+}
+
+.heart {
+    position: relative;
+    & i {
+        font-size: 1.5rem;
+    }
+
+    & .fas {
+        position: absolute;
+        opacity: 0;
+        @include gradient (180deg);
+        cursor: pointer;
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
+
+    }
+
+    &:hover .fas {
+        transition: all 150ms ease-in;
+        display: inline;
+        opacity: 1;
+    }
+
+    &:hover .far {
+        transition: all 150ms ease-in;
+        opacity: 0;
+    }
+}
+
+.sousmenu {
+    width: 100%;
+}
+
+.sousmenu__title {
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 4rem;
+        height: 0.2rem;
+        background-color: $colour-tertiary;
+    }
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-bottom: 0.3rem;
+    margin: 1rem;
+    
+}
+
+
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.menuitem {
+    display: flex;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: $colour-white;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0rem 0.2rem 0.5rem 0.1rem;
+    animation: itemppear 0.8s;
+    animation-delay: 2.5s;
+    animation-fill-mode: both;
+    max-width: 100%;
+
+}
+
+.menuitem__header {
+    flex-basis: 0%;
+    min-width: 0;
+    flex-grow: 1;
+    padding: 1rem;
+
+    & h2 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    & .truncated {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.menuitem__price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.menuitem__done {
+    width: 4rem;
+    transition: 0.5s;
+    margin-right: -4rem;
+    background-color: $colour-tertiary;
+}
+
+.menuitem__wrap {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $colour-white;
+    border-radius: 5rem;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+}
+
+.menuitem__icon {
+    color: $colour-tertiary;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+}
+
+.delay-6 {
+    animation-delay: 0.6s;
+}
+
+.delay-7 {
+    animation-delay: 0.7s;
+}
+
+.delay-8 {
+    animation-delay: 0.8s;
+}
+
+.delay-9 {
+    animation-delay: 0.9s;
+}
+
+.reserved__btn {
+    button:hover {
+        transform: scale(1.05);
+        transition: all 80ms ease-in;
+        filter: brightness(1.05);
+        box-shadow: #D5D5D5 0.5rem 0.5rem;
+    }
+
+   
+
+    button {
+        font-family: "Roboto" sans-serif;
+        font-size: 1rem;
+        font-weight: 300;
+        color: $colour-white;
+        border-radius: 5rem;
+        border: none;
+        padding: 1rem 2rem;
+        margin: 2rem 0;
+        background: $colour-primary;
+        background: linear-gradient(-10deg $colour-primary 25%, $colour-secondary 100%);
+
+    }
+
+
+}

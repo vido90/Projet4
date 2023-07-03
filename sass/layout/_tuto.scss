@@ -1,6 +1,7 @@
 
 $tuto-bullet-height:1rem;
 .tuto {
+  background-color: white;
   counter-reset: steps;
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -8,11 +9,10 @@ $tuto-bullet-height:1rem;
   & ol {
     @media (max-width:992px) {
       flex-direction: column;
-      padding: 1rem;
+      padding: 0.5rem;
     }
     counter-reset: steps;
     display: flex;
-    gap: 1rem;
   }
   & li {
     position: relative;

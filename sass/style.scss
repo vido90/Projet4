@@ -1,15 +1,22 @@
 @import "variable";
-@import "header";
-@import "fonctionnement";
+@import "utils/base";
+@import "utils/_mixins";
+@import "utils/placeholder";
+@import "layout/header";
+@import "layout/tuto";
+@import "layout/menu";
+@import "layout/footer";
+@import "layout/restaurants";
+@import "layout/reserved";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 /*# sourceMappingURL=style.css.map */
 
-::before,
+/* ::before,
 ::after {
   box-sizing: border-box;
   border: 1px solid;
-}
+} */
 
 body {
   margin: 0;
@@ -17,17 +24,22 @@ body {
 }
 
 
-main .city {
+main .search {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  background-color: #f3f3f3;
+  background-color: #eaeaea;
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
-main .city i {
-  font-size: 1.5rem;
+.search-box input {
+border: none;
+background-color: #eaeaea;
+width: 7rem;
+}
+main .search i {
+  padding-right: 0.5rem;
+  font-size: 1rem;
 }
 

@@ -1,12 +1,13 @@
 footer {
-    background-color: #353535;
+    background-color: $darkgrey;
     color: white;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .footer__title {
     font-family: "Shrikhand", "Roboto", sans-serif;
     font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .footer__items {

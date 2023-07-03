@@ -1,6 +1,102 @@
 .restaurants {
-    background-color: #f6f6f6;
-    .card {
-        border: 1px solid black;
-        height: 40rem;
+    background-color: $grey;
+    padding: 1rem;
+    margin: 1.5rem 0 4rem 0;
+}
+
+h2 {
+    font-family: "Roboto" sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+
+.restaurant__list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 1rem;
+    
+}
+
+.restaurant__list__card {
+    width: 18rem;
+   background-color: white;
+   border-radius: 1rem;
+   position: relative;
+   text-decoration: none;
+   color: inherit;
+   display: block;
+   @include base-shadow;
+}
+
+.restaurant__list__card__image {
+    border: 0 solid transparent;
+    border-radius: 1rem 1rem 0  0;
+    box-shadow: none;
+    object-fit: cover;
+
+    &::before {
+        content: "Nouveau";
+        position: absolute;
+        padding: 0.5rem;
+        font-family: "Roboto", "sans-serif";
+        font-size: 0.8rem;
+        color: #1b6150;
+        background-color: #99e2d0;
+        top: 1rem;
+        right: 1rem;
+        border-radius: 0.25rem;
     }
+
+    
+    & img {
+        width: 100%;
+        height: 10rem;
+        object-fit: cover;
+        border-radius: 0.9rem 0.9rem 0 0;
+    }
+
+}
+
+.restaurant__list__card__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.restaurant__list__card__body__title {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.restaurant__list__card__body__title__h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.restaurant__list__card__body__title__location {
+    font-family: "Roboto" sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.restaurant__list__card__like {
+    position: relative;
+    width: 10%;
+    &--empty {
+        position: absolute;
+    }
+    &--full {
+        position: absolute;
+        background: linear-gradient(180deg, #9356dc 25%, #ff79da 100%);
+        background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+        color: transparent;
+    } 
+}
