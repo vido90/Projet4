@@ -13,6 +13,10 @@ $tuto-bullet-height:1rem;
     }
     counter-reset: steps;
     display: flex;
+    @media (min-width: 993px) {
+      gap: 2rem;
+    }
+    
   }
   & li {
     position: relative;

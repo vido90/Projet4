@@ -1,3 +1,4 @@
+@use "../utils/mixins";
 .restaurants {
     background-color: $grey;
     padding: 1rem;
@@ -13,16 +14,17 @@ h2 {
 
 
 .restaurant__list {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   gap: 1rem;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 2rem;
+   @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+   }
     
 }
 
 .restaurant__list__card {
-    width: 18rem;
-   background-color: white;
+    background-color: white;
    border-radius: 1rem;
    position: relative;
    text-decoration: none;
@@ -76,27 +78,41 @@ h2 {
 .restaurant__list__card__body__title__h3 {
     font-size: 1.1rem;
     font-weight: 500;
-    margin: 0;
+    padding: 0.3rem;
 }
 
 .restaurant__list__card__body__title__location {
     font-family: "Roboto" sans-serif;
     font-size: 1rem;
     font-weight: 300;
+    padding: 0.3rem;
 }
 
-.restaurant__list__card__like {
+.heart {
     position: relative;
-    width: 10%;
-    &--empty {
-        position: absolute;
+    & i {
+        font-size: 1.5rem;
     }
-    &--full {
+
+    & .fas {
         position: absolute;
-        background: linear-gradient(180deg, #9356dc 25%, #ff79da 100%);
-        background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-        color: transparent;
-    } 
+        opacity: 0;
+        @include gradient (180deg);
+        cursor: pointer;
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
+
+    }
+
+    &:hover .fas {
+        transition: all 150ms ease-in;
+        display: inline;
+        opacity: 1;
+    }
+
+    &:hover .far {
+        transition: all 150ms ease-in;
+        opacity: 0;
+    }
 }

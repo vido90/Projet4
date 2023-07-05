@@ -1,5 +1,3 @@
-@use "../utils/mixins";
-
 
 .header {
     background-color: white;
@@ -47,14 +45,14 @@
 }
 
 .menu__header {
-    padding: 1rem 2rem 2rem 1rem;
+    padding: 1rem 2rem 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .menu__title {
-    font-family: "Shrikhand", sans-serif;
+    font-family: "Shrikhand",sans-serif;
     font-size: 1.5rem;
 }
 
@@ -86,9 +84,20 @@
         opacity: 0;
     }
 }
-
+.sousmenus {
+    @media (min-width: 992px) {
+        display: flex;
+        justify-content: center;
+        width: 100%; 
+    }
+    
+}
 .sousmenu {
     width: 100%;
+    @media (min-width: 992px) {
+        width: 33%;
+
+    }
 }
 
 .sousmenu__title {
@@ -108,13 +117,14 @@
     margin: 1rem;
     
 }
-
-
-
-.delay-1 {
-    animation-delay: 0.1s;
-}
-
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 .menuitem {
     display: flex;
     width: 100%;
@@ -124,10 +134,28 @@
     overflow: hidden;
     margin-bottom: 1rem;
     box-shadow: 0rem 0.2rem 0.5rem 0.1rem;
-    animation: itemppear 0.8s;
+    animation: fade-in 0.8s;
     animation-delay: 2.5s;
     animation-fill-mode: both;
     max-width: 100%;
+    &:hover {
+        .menuitem__done {
+            overflow: auto;
+            margin-right: 0;
+        }
+        .menuitem__wrap {
+            transform:  rotate(360deg);
+        }
+    }
+    &:active {
+        .menuitem__done {
+            overflow: auto;
+            margin-right: 0;
+        }
+        .menuitem__wrap {
+            transform:  rotate(360deg);
+        }
+    }
 
 }
 
@@ -159,10 +187,16 @@
 }
 
 .menuitem__done {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 4rem;
     transition: 0.5s;
     margin-right: -4rem;
     background-color: $colour-tertiary;
+    &:hover {
+        margin-right: 0;
+    }
 }
 
 .menuitem__wrap {
@@ -170,47 +204,57 @@
     height: 1.5rem;
     background-color: $colour-white;
     border-radius: 5rem;
-    transform: rotate(180deg);
-    transition-duration: 0.5s;
+    transition: all 1s;
+    transform: rotate(0);
 }
 
 .menuitem__icon {
+    display: grid;
+    place-items: center;
+    background: white;
+    aspect-ratio: 1;
+    border-radius: 1rem;
     color: $colour-tertiary;
+    
 }
 
-.delay-2 {
-    animation-delay: 0.2s;
-}
-
-.delay-3 {
+.delay-1 {
     animation-delay: 0.3s;
 }
-
-.delay-4 {
+.delay-2 {
     animation-delay: 0.4s;
 }
 
-.delay-5 {
+.delay-3 {
     animation-delay: 0.5s;
 }
 
-.delay-6 {
+.delay-4 {
     animation-delay: 0.6s;
 }
 
-.delay-7 {
+.delay-5 {
     animation-delay: 0.7s;
 }
 
-.delay-8 {
+.delay-6 {
     animation-delay: 0.8s;
 }
 
-.delay-9 {
+.delay-7 {
     animation-delay: 0.9s;
 }
 
+.delay-8 {
+    animation-delay: 0.10s;
+}
+
+.delay-9 {
+    animation-delay: 0.11s;
+}
+
 .reserved__btn {
+    text-align: center;
     button:hover {
         transform: scale(1.05);
         transition: all 80ms ease-in;
