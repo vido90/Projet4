@@ -24,7 +24,7 @@ h3 {
 }
 
 p {
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 300;
 }
@@ -53,7 +53,7 @@ section {
 
 .header__logo {
   margin: 0;
-  pad: 1rem;
+  padding: 1rem;
   box-shadow: 0rem 0rem 0.5rem #919191;
   display: flex;
   justify-content: center;
@@ -208,7 +208,7 @@ section {
 }
 
 h2 {
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 1rem 0;
@@ -280,7 +280,7 @@ h2 {
 }
 
 .restaurant__list__card__body__title__location {
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   padding: 0.3rem;
@@ -592,7 +592,7 @@ footer {
   box-shadow: #D5D5D5 0.5rem 0.5rem;
 }
 .reserved__btn button {
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: white;
