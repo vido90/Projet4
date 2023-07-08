@@ -49,8 +49,9 @@
         margin-top: 2.5rem;
         @include base-shadow;
         &:hover {
-            transform: scale(1.82);
-            opacity: 0.9;
+            transform: scale(1.05);
+            transition: all 80ms ease-in;
+            filter: brightness(1.05);
         }
     }
   }

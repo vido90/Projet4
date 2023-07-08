@@ -2,12 +2,23 @@ footer {
     background-color: $darkgrey;
     color: white;
     padding: 2rem;
+
+    @media (min-width: 992px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    
+    }
 }
 
 .footer__title {
     font-family: "Shrikhand", "Roboto", sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
+
+    @media (min-width: 992px) {
+        margin-left: 7rem;
+    }
 }
 
 .footer__items {
@@ -15,11 +26,20 @@ footer {
     padding: 0;
     list-style-type: none;
 
+    @media (min-width: 992px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+
     & li {
         padding: 0.2rem;
         & a {
             text-decoration: none;
             color: inherit;
+    
         }
         }
     }

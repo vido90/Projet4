@@ -6,10 +6,15 @@
 
 .reserved {
     text-align: center;
+    
     &__btn button {
         @include gradient(-10deg);
         &:hover {
             @extend %hover-btn;
         }
+    }
+
+    @media (min-width: 992px) {
+        padding-bottom: 5rem;
     }
 }
