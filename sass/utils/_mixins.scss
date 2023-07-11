@@ -9,5 +9,5 @@
 // gradiant //
 @mixin gradient ($degree) {
     background: $colour-primary;
-    background:linear-gradient(($degree), $colour-primary 25%, $colour-secondary 100%)
+    background:linear-gradient(($degree), $colour-primary 45%, $colour-secondary 100%)
 }

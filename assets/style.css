@@ -93,7 +93,7 @@ section {
   border: none;
   border-radius: 2rem;
   background: #9356DC;
-  background: linear-gradient(-10deg, #9356DC 25%, #FF79DA 100%);
+  background: linear-gradient(-10deg, #9356DC 45%, #FF79DA 100%);
   cursor: pointer;
   transition-duration: 0.25s;
   margin-top: 2.5rem;
@@ -302,7 +302,7 @@ h2 {
   position: absolute;
   opacity: 0;
   background: #9356DC;
-  background: linear-gradient(180deg, #9356DC 25%, #FF79DA 100%);
+  background: linear-gradient(180deg, #9356DC 45%, #FF79DA 100%);
   cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
@@ -445,7 +445,7 @@ footer {
   position: absolute;
   opacity: 0;
   background: #9356DC;
-  background: linear-gradient(180deg, #9356DC 25%, #FF79DA 100%);
+  background: linear-gradient(180deg, #9356DC 45%, #FF79DA 100%);
   cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
@@ -662,7 +662,7 @@ footer {
 }
 .reserved__btn button {
   background: #9356DC;
-  background: linear-gradient(-10deg, #9356DC 25%, #FF79DA 100%);
+  background: linear-gradient(-10deg, #9356DC 45%, #FF79DA 100%);
 }
 @media (min-width: 992px) {
   .reserved {
