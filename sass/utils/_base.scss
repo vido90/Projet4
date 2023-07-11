@@ -11,7 +11,7 @@
 body {
   background-color: $colour-white;
     margin: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif; 
   }
 
 
@@ -28,6 +28,10 @@ p {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 300;
+}
+
+text {
+  font-size: 1rem;
 }
 
 a {

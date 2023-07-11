@@ -1,9 +1,11 @@
 @use "../utils/mixins";
 .restaurants {
     background-color: $grey;
-    padding-right: 15rem;
-    padding-left: 15rem;
     margin: 1.5rem 0 0 0;
+    @media (min-width:992px) {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
 }
 
 h2 {

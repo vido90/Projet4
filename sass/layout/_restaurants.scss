@@ -1,4 +1,4 @@
-
+@use "../utils/mixins";
 .header {
     background-color: white;
     margin: 0;
@@ -125,8 +125,8 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 4rem;
-        height: 0.2rem;
+        width: 2.5rem;
+        height: 0.15rem;
         background-color: $colour-tertiary;
     }
     position: relative;
@@ -152,7 +152,7 @@
     cursor: pointer;
     overflow: hidden;
     margin-bottom: 1rem;
-    box-shadow: 0rem 0.2rem 0.5rem 0.1rem;
+    @include base-shadow;
     animation: fade-in 0.8s;
     animation-delay: 2.5s;
     animation-fill-mode: both;
@@ -286,10 +286,6 @@
         box-shadow: #D5D5D5 0.5rem 0.5rem;
     }
 
-    
-
-   
-
     button {
         font-family: "Roboto", sans-serif;
         font-size: 1rem;
@@ -299,8 +295,9 @@
         border: none;
         padding: 1rem 2rem;
         margin: 2rem 0;
+        @include base-shadow;
         background: $colour-primary;
-        background: linear-gradient(-10deg $colour-primary 25%, $colour-secondary 100%);
+        background: linear-gradient(-10deg, $colour-primary 25%, $colour-secondary 100%);
 
     }
 

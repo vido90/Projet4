@@ -29,6 +29,10 @@ p {
   font-weight: 300;
 }
 
+text {
+  font-size: 1rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -88,7 +92,8 @@ section {
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  background: #9356DC;
+  background: linear-gradient(-10deg, #9356DC 25%, #FF79DA 100%);
   cursor: pointer;
   transition-duration: 0.25s;
   margin-top: 2.5rem;
@@ -141,21 +146,15 @@ section {
   counter-reset: steps;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  padding-right: 15rem;
-  padding-left: 15rem;
 }
 .tuto ol {
+  flex-direction: column;
   counter-reset: steps;
   display: flex;
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .tuto ol {
-    flex-direction: column;
-    padding: 0.5rem;
-  }
-}
-@media (min-width: 993px) {
-  .tuto ol {
+    flex-direction: row;
     gap: 2rem;
   }
 }
@@ -205,9 +204,13 @@ section {
 
 .restaurants {
   background-color: #f6f6f6;
-  padding-right: 15rem;
-  padding-left: 15rem;
   margin: 1.5rem 0 0 0;
+}
+@media (min-width: 992px) {
+  .restaurants {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
 }
 
 h2 {
@@ -487,8 +490,8 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 4rem;
-  height: 0.2rem;
+  width: 2.5rem;
+  height: 0.15rem;
   background-color: #99E2D0;
 }
 
@@ -508,7 +511,7 @@ footer {
   cursor: pointer;
   overflow: hidden;
   margin-bottom: 1rem;
-  box-shadow: 0rem 0.2rem 0.5rem 0.1rem;
+  box-shadow: 0rem 0.2rem 0.5rem 0.1rem #D5D5D5;
   animation: fade-in 0.8s;
   animation-delay: 2.5s;
   animation-fill-mode: both;
@@ -644,8 +647,9 @@ footer {
   border: none;
   padding: 1rem 2rem;
   margin: 2rem 0;
+  box-shadow: 0rem 0.2rem 0.5rem 0.1rem #D5D5D5;
   background: #9356DC;
-  background: linear-gradient(-10deg #9356DC 25%, #FF79DA 100%);
+  background: linear-gradient(-10deg, #9356DC 25%, #FF79DA 100%);
 }
 
 /*Réservation*/

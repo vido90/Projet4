@@ -5,17 +5,14 @@ $tuto-bullet-height:1rem;
   counter-reset: steps;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  padding-right: 15rem;
-  padding-left: 15rem;
+  
   & ol {
-    @media (max-width:992px) {
-      flex-direction: column;
-      padding: 0.5rem;
-    }
+    flex-direction: column;
     counter-reset: steps;
     display: flex;
-    @media (min-width: 993px) {
-      gap: 2rem;
+    @media (min-width: 992px) {
+    flex-direction: row;
+    gap: 2rem;
     }
     
   }

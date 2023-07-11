@@ -1,4 +1,4 @@
-
+@use "../utils/mixins";
 .header {
     background-color: white;
     margin: 0;
@@ -43,7 +43,7 @@
         padding: 1rem 2rem;
         border: none;
         border-radius: 2rem;
-        background-image: linear-gradient(to top, $colour-primary, $colour-secondary);
+        @include gradient(-10deg);
         cursor: pointer;
         transition-duration: .25s;
         margin-top: 2.5rem;
